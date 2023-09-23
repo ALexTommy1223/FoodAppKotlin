@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="2dp"
     tools:context=".fragment.HomeFragment">
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+<<<<<<< HEAD
         android:layout_marginLeft="5dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="5dp"
+=======
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+>>>>>>> b4712f37f9bbf10dfe17ffb84f030ee0d513e084
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +30,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:iss_auto_cycle="true"
+<<<<<<< HEAD
             app:iss_delay="2000"
             app:iss_period="2000"
+=======
+            app:iss_delay="1500"
+            app:iss_no_dots="true"
+            app:iss_period="1500"
+>>>>>>> b4712f37f9bbf10dfe17ffb84f030ee0d513e084
             app:iss_text_align="CENTER" />
     </androidx.cardview.widget.CardView>
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,11 +50,22 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/akaya_telivigala"
         android:text="Popular"
+=======
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/almendra"
+        android:text="Popular"
+        android:textColor="@color/black"
+>>>>>>> b4712f37f9bbf10dfe17ffb84f030ee0d513e084
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/viewMenu"
         android:layout_width="80dp"
         android:layout_height="25dp"
@@ -55,10 +78,25 @@
         android:text="View Menu"
         android:textAlignment="center"
         android:textColor="@color/textColor"
+=======
+        android:id="@+id/textView13"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/textviewshape"
+        android:elevation="5dp"
+        android:fontFamily="@font/almendra"
+        android:gravity="center"
+        android:text="View Menu"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+>>>>>>> b4712f37f9bbf10dfe17ffb84f030ee0d513e084
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
         android:id="@+id/popularRec"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -69,4 +107,13 @@
         app:layout_constraintTop_toBottomOf="@+id/viewMenu">
 
     </androidx.recyclerview.widget.RecyclerView>
+=======
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+>>>>>>> b4712f37f9bbf10dfe17ffb84f030ee0d513e084
 </androidx.constraintlayout.widget.ConstraintLayout>
