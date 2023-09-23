@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.foodorderkotlin.R
+import com.example.foodorderkotlin.adapter.PopularAdapter
 import com.example.foodorderkotlin.databinding.ActivityChooseLocationBinding
 import com.example.foodorderkotlin.databinding.FragmentHomeBinding
 
@@ -28,6 +30,11 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding=FragmentHomeBinding.inflate(inflater,container,false)
+
+        binding.viewMenu.setOnClickListener{
+            val bottomSheetDialog= MenuBootomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
 
         return binding.root
 
@@ -56,6 +63,12 @@ class HomeFragment : Fragment() {
                 Toast.makeText(requireContext(),itemMessage,Toast.LENGTH_SHORT).show()
             }
         })
+        val foodName= listOf("Burger","sandwich","momo","item")
+        val price= listOf("$5","$7","$7","$19")
+        val  populerFoodImages= listOf(R.drawable.menu1,R.drawable.menu2,R.drawable.menu3,R.drawable.menu4)
+        val adapter=PopularAdapter(foodName,price,populerFoodImages)
+        binding.popularRec.layoutManager=LinearLayoutManager(requireContext())
+        binding.popularRec.adapter=adapter
     }
 
     companion object {
