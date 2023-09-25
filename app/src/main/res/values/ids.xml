@@ -13,4 +13,5 @@
     <item name="appCompatButton" type="id" />
     <item name="login" type="id" />
     <item name="editTextTextPersonName" type="id" />
+    <item name="viewallMenu" type="id" />
 </resources>
